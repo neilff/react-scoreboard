@@ -1,0 +1,58 @@
+{
+  "name": "react-liqbo",
+  "version": "1.0.0",
+  "description": "Liqbo - Lcbo Finder written in React.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "node node_modules/gulp/bin/gulp.js build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilff/react-liqbo.git"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "author": "Neil Fenton <neilff@gmail.com> (http://github.com/neilff)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neilff/react-liqbo.git/issues"
+  },
+  "homepage": "https://github.com/neilff/react-liqbo.git",
+  "dependencies": {
+    "axios": "^0.5.2",
+    "babel-core": "^4.7.4",
+    "babel-loader": "^4.1.0",
+    "classnames": "^1.2.0",
+    "css-loader": "^0.9.1",
+    "debounce": "^1.0.0",
+    "es6-loader": "^0.2.0",
+    "eventemitter3": "^0.1.6",
+    "express": "~4.9.x",
+    "extract-text-webpack-plugin": "^0.5.0",
+    "fastclick": "^1.0.6",
+    "file-loader": "^0.8.1",
+    "flux": "^2.0.1",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "gutil": "^1.6.4",
+    "immutable": "^3.7.1",
+    "jsx-loader": "^0.13.1",
+    "node-sass": "^2.1.1",
+    "pouchdb": "^3.3.1",
+    "q": "^1.2.0",
+    "ramda": "^0.13.0",
+    "react": "^0.13.0",
+    "react-document-title": "^1.0.2",
+    "react-gmaps": "^0.1.6",
+    "react-hot-loader": "^1.2.2",
+    "react-intl": "^1.2.0",
+    "react-router": "^0.13.2",
+    "sass-loader": "^0.6.0",
+    "style-loader": "^0.9.0",
+    "treo": "^0.5.0",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.7.2",
+    "webpack-dev-server": "^1.7.0"
+  }
+}
