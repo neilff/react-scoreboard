@@ -15,8 +15,6 @@ gulp.task('build', ['webpack:build']);
 gulp.task('webpack:build', function(callback) {
   var config = webpackConfig(false);
 
-  console.log(config);
-
   gulp.src('./src/index.html')
     .pipe(gulp.dest('./build'));
 
