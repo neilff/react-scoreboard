@@ -32,3 +32,5 @@ npm install
 
 - UI/UX needs work
 - Env. variable issues
+- Code linting
+- Testing
