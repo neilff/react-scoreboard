@@ -8,7 +8,7 @@ module.exports = function(isDevelopment) {
     debug: isDevelopment,
     devtool: isDevelopment ? 'eval-source-map' : '',
     entry: isDevelopment ? [
-      'webpack-dev-server/client?https://localhost:8888',
+      'webpack-dev-server/client?http://localhost:8888',
       'webpack/hot/only-dev-server',
       './src/client/app.js'
     ] : ['./src/client/app.js'],

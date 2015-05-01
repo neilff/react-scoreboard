@@ -48,7 +48,7 @@ function _extractScore(boxscore, teams) {
 function getGameListing(gameId) {
   console.log('getGameListing :: request');
 
-  axios.get('https://api.onetwosee.com/nhl/update/' + gameId + '/rogers?normalize=true')
+  axios.get('http://api.onetwosee.com/nhl/update/' + gameId + '/rogers?normalize=true')
     .then(function(response) {
       console.log('getGameListing :: response :: ', response.data);
 
@@ -72,6 +72,9 @@ function getGameListing(gameId) {
       gameInfo.teams = teams;
 
       actions.onGameInfoRefresh(gameInfo);
+    })
+    .then(null, function(err) {
+      console.log('Error: Unable to connect to onetwosee API');
     });
 }
 

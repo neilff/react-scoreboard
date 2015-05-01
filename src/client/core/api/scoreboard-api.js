@@ -18,6 +18,8 @@ function getScoreboard() {
       actions.onScoreboardRefresh(response.data);
     })
     .then(null, function() {
+      console.log('Error: Unable to connect to Scoreboard API');
+
       actions.onScoreboardRefreshError({
         message: 'Unable to connect to Scoreboard API'
       });

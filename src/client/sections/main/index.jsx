@@ -22,7 +22,7 @@ export default React.createClass({
 
   render() {
     return (
-      <DocumentTitle title="Liqbo">
+      <DocumentTitle title="Scoreboard App">
         <main className="layout">
           <nav className="header-bar">
             <h1>Scoreboard</h1>

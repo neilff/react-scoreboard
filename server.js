@@ -10,11 +10,11 @@ app.use(cors());
 
 app.get('/api/scoreboard', function (req, res) {
   request
-    .get('https://www.sportsnet.ca/wp-content/themes/sportsnet/zones/ajax-scoreboard.php')
+    .get('http://www.sportsnet.ca/wp-content/themes/sportsnet/zones/ajax-scoreboard.php')
     .set('Accept', 'application/json')
     .end(function(err, data) {
       if (err) {
-        return res.status(400).json({error: 'An error occured'});
+        return res.status(400).json({error: 'Unable to connect to scoreboard API'});
       }
 
       var scoreboard = JSON.parse(data.text);
@@ -28,7 +28,7 @@ app.get('/api/scoreboard', function (req, res) {
 
         return res.status(200).json(response);
       } else {
-        return res.status(400).json({error: 'Invalid JSON'});
+        return res.status(400).json({error: 'Invalid JSON from scoreboard API'});
       }
     });
 });
