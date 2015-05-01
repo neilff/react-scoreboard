@@ -1,6 +1,6 @@
 # Scoreboard
 
-Scoreboard is a simple dashboard application for visualizing hockey stats from various sports APIs. The architecture is heavily based on [este.js](https://github.com/Steida/este)
+Scoreboard is a simple dashboard application for visualizing hockey stats from various sports APIs. The architecture is heavily based on [este.js](https://github.com/Steida/este).
 
 ##### [http://react-scoreboard.herokuapp.com/](http://react-scoreboard.herokuapp.com/)
 
