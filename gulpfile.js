@@ -1,13 +1,13 @@
-var gulp = require('gulp');
+var gulp = require('gulp-help')(require('gulp'));
 var nodemon = require('gulp-nodemon');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 
-gulp.task('default', ['nodemon', 'webpack-dev-server']);
+gulp.task('serve', 'Launch development environment', ['nodemon', 'webpack-dev-server']);
 
-gulp.task('nodemon', function () {
+gulp.task('nodemon', false, function () {
   nodemon({
     script: 'server.js',
     ext: 'js html',
@@ -15,13 +15,13 @@ gulp.task('nodemon', function () {
   });
 });
 
-gulp.task('build-dev', ['webpack:build-dev'], function() {
+gulp.task('build-dev', 'Create development build', ['webpack:build-dev'], function() {
   gulp.watch(['src/**/*'], ['webpack:build-dev']);
 });
 
-gulp.task('build', ['webpack:build']);
+gulp.task('build', 'Create production build', ['webpack:build']);
 
-gulp.task('webpack:build', function(callback) {
+gulp.task('webpack:build', false, function(callback) {
   var config = webpackConfig(false);
 
   gulp.src('./src/index.html')
@@ -45,7 +45,7 @@ gulp.task('webpack:build', function(callback) {
 var devConfig = webpackConfig(true);
 var devCompiler = webpack(devConfig);
 
-gulp.task('webpack:build-dev', function(callback) {
+gulp.task('webpack:build-dev', false, function(callback) {
   devCompiler.run(function(err, stats) {
     if(err) {
       throw new gutil.PluginError('webpack:build-dev', err);
@@ -59,7 +59,7 @@ gulp.task('webpack:build-dev', function(callback) {
   });
 });
 
-gulp.task('webpack-dev-server', function(callback) {
+gulp.task('webpack-dev-server', false, function(callback) {
   var config = webpackConfig(true);
 
   // Start a webpack-dev-server
