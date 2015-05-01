@@ -2,6 +2,8 @@
 
 Scoreboard is a simple dashboard application for visualizing hockey stats from various sports APIs.
 
+![Alt text](/screenshot.png?raw=true "Scoreboard")
+
 ##### Install
 
 ```
