@@ -10,7 +10,7 @@ app.use(cors());
 
 app.get('/api/scoreboard', function (req, res) {
   request
-    .get('http://www.sportsnet.ca/wp-content/themes/sportsnet/zones/ajax-scoreboard.php')
+    .get('https://www.sportsnet.ca/wp-content/themes/sportsnet/zones/ajax-scoreboard.php')
     .set('Accept', 'application/json')
     .end(function(err, data) {
       if (err) {
@@ -34,5 +34,5 @@ app.get('/api/scoreboard', function (req, res) {
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running at http://localhost:' + app.get('port'));
+  console.log('Node app is running at https://localhost:' + app.get('port'));
 });

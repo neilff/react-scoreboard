@@ -48,7 +48,7 @@ function _extractScore(boxscore, teams) {
 function getGameListing(gameId) {
   console.log('getGameListing :: request');
 
-  axios.get('http://api.onetwosee.com/nhl/update/' + gameId + '/rogers?normalize=true')
+  axios.get('https://api.onetwosee.com/nhl/update/' + gameId + '/rogers?normalize=true')
     .then(function(response) {
       console.log('getGameListing :: response :: ', response.data);
 

@@ -5,8 +5,13 @@ import * as actions from '../scores/actions';
 
 let timer = null;
 
+// TODO: Fix hack
+var api = document.location.hostname == 'localhost' ?
+  'http://localhost:5000/api/scoreboard' :
+  '/api/scoreboard';
+
 function getScoreboard() {
-  axios.get('http://localhost:5000/api/scoreboard')
+  axios.get(api)
     .then(function(response) {
       console.log('getScoreboard :: response :: ', response.data);
 
