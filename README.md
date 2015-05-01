@@ -4,13 +4,17 @@ Scoreboard is a simple dashboard application for visualizing hockey stats from v
 
 ![Alt text](/screenshot.png?raw=true "Scoreboard")
 
+##### TODO
+
+- UI/UX needs work
+- Env. variable issues
+
 ##### Install
 
 ```
 git clone https://github.com/neilff/react-scoreboard.git
 npm install
 ```
-
 
 ##### Available tasks
 
