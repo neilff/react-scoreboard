@@ -2,6 +2,8 @@
 
 Scoreboard is a simple dashboard application for visualizing hockey stats from various sports APIs.
 
+##### [http://react-scoreboard.herokuapp.com/](http://react-scoreboard.herokuapp.com/)
+
 ![Alt text](/screenshot.png?raw=true "Scoreboard")
 
 ##### Install
