@@ -39,55 +39,55 @@ export default React.createClass({
     return (
       <DocumentTitle title={ this.getIntlMessage('home.title') }>
         <div className="boxscore">
-          <Metric title="Overview">
+          <Metric title={ this.getIntlMessage('boxscore.overview') }>
             <Overview gameInfo={ gameInfo } />
           </Metric>
-          <Metric title="Score">
+          <Metric title={ this.getIntlMessage('boxscore.score') }>
             <Score
               boxscore={ boxscore.get('score') }
               gameInfo={ gameInfo } />
           </Metric>
-          <Metric title="Shots on Goal">
+          <Metric title={ this.getIntlMessage('boxscore.shots') }>
             <DoughnutChart
               id="shots"
               data={ boxscore.get('shots') } />
           </Metric>
-          <Metric title="Faceoffs Won">
+          <Metric title={ this.getIntlMessage('boxscore.faceoffsWon') }>
             <DoughnutChart
               id="faceoffsWon"
               data={ boxscore.get('faceoffsWon') } />
           </Metric>
-          <Metric title="Giveaways">
+          <Metric title={ this.getIntlMessage('boxscore.giveaways') }>
             <DoughnutChart
               id="giveaways"
               data={ boxscore.get('giveaways') } />
           </Metric>
-          <Metric title="Hits">
+          <Metric title={ this.getIntlMessage('boxscore.hits') }>
             <DoughnutChart
               id="hits"
               data={ boxscore.get('hits') } />
           </Metric>
-          <Metric title="Penalties">
+          <Metric title={ this.getIntlMessage('boxscore.penalties') }>
             <DoughnutChart
               id="penalties"
               data={ boxscore.get('penalties') } />
           </Metric>
-          <Metric title="Penalty Minutes">
+          <Metric title={ this.getIntlMessage('boxscore.penaltyMin') }>
             <DoughnutChart
               id="penaltyMin"
               data={ boxscore.get('penaltyMin') } />
           </Metric>
-          <Metric title="Powerplays">
+          <Metric title={ this.getIntlMessage('boxscore.powerPlays') }>
             <DoughnutChart
               id="powerPlays"
               data={ boxscore.get('powerPlays') } />
           </Metric>
-          <Metric title="Saves">
+          <Metric title={ this.getIntlMessage('boxscore.saves') }>
             <DoughnutChart
               id="saves"
               data={ boxscore.get('saves') } />
           </Metric>
-          <Metric title="Shots Blocked">
+          <Metric title={ this.getIntlMessage('boxscore.shotsBlocked') }>
             <DoughnutChart
               id="shotsBlocked"
               data={ boxscore.get('shotsBlocked') } />

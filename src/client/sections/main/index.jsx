@@ -13,21 +13,21 @@ export default React.createClass({
     require('fastclick').attach(document.body);
 
     state.on('change', () => {
-      console.time('whole app rerender')
+      // console.time('whole app rerender')
       this.forceUpdate(() => {
-        console.timeEnd('whole app rerender')
+        // console.timeEnd('whole app rerender')
       });
     });
   },
 
   render() {
     return (
-      <DocumentTitle title="Scoreboard App">
+      <DocumentTitle title={ this.getIntlMessage('home.title') }>
         <main className="layout">
           <nav className="header-bar">
-            <h1>Scoreboard</h1>
+            <h1>{ this.getIntlMessage('appTitle') }</h1>
             <div className="header-bar__links">
-              <Link to="scoreboard">Scores</Link>
+              <Link to="scoreboard">{ this.getIntlMessage('links.scores') }</Link>
             </div>
           </nav>
           <div className="content">

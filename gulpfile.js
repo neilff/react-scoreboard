@@ -83,6 +83,6 @@ gulp.task('webpack-dev-server', false, function(callback) {
       throw new gutil.PluginError('webpack-dev-server', err);
     }
 
-    gutil.log('[webpack-dev-server]', 'https://localhost:8888/webpack-dev-server/index.html');
+    gutil.log('[webpack-dev-server]', 'http://localhost:8888/webpack-dev-server/index.html');
   });
 });

@@ -12,7 +12,10 @@ export default React.createClass({
     return (
       <DocumentTitle title={ this.getIntlMessage('home.title') }>
         <div className="four-oh-four">
-          <h1>404. <small>An Error Occured.</small></h1>
+          <h1>
+            { this.getIntlMessage('fourOhFour.title') }
+            <small>{ this.getIntlMessage('fourOhFour.error') }</small>
+          </h1>
         </div>
       </DocumentTitle>
     );

@@ -1,13 +1,14 @@
 import React from 'react';
 import R from 'ramda';
 import Immutable from 'immutable';
+import {IntlMixin} from 'react-intl';
 import {Link} from 'react-router';
 import {addons} from 'react/addons';
 
 require('./_quick-boxscore.scss');
 
 export default React.createClass({
-  mixins: [addons.PureRenderMixin],
+  mixins: [addons.PureRenderMixin, IntlMixin],
 
   propTypes: {
     games: React.PropTypes.instanceOf(Immutable.List),
@@ -17,6 +18,7 @@ export default React.createClass({
   render() {
     const games = this.props.games;
     const title = this.props.title;
+    const translate = this.getIntlMessage;
 
     var list = games.map(item => {
       var isInProgress = item.get('game_status') === 'In-Progress';
@@ -61,7 +63,7 @@ export default React.createClass({
                 <span>{ item.get('home_score') }</span>
               </div>
               <div className="quick-boxscore__game--details">
-                <span>Period { item.get('period') }</span>
+                <span>{ translate(('boxscore.period')) } { item.get('period') }</span>
                 <span>{ item.get('clock') }</span>
                 <span>{ item.get('channel') }</span>
               </div>

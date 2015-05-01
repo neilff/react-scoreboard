@@ -1,12 +1,13 @@
 import React from 'react';
 import R from 'ramda';
 import Immutable from 'immutable';
+import {IntlMixin} from 'react-intl';
 import {addons} from 'react/addons';
 
 require('./_score.scss');
 
 export default React.createClass({
-  mixins: [addons.PureRenderMixin],
+  mixins: [addons.PureRenderMixin, IntlMixin],
 
   propTypes: {
     boxscore: React.PropTypes.instanceOf(Immutable.Map),
@@ -14,6 +15,7 @@ export default React.createClass({
   },
 
   render() {
+    const translate = this.getIntlMessage;
     const boxscore = this.props.boxscore;
     const gameInfo = this.props.gameInfo;
     const away = boxscore.get('away');
@@ -27,7 +29,7 @@ export default React.createClass({
             <small>{ home.get('name') }</small>
           </div>
           <div className="score__middle">
-            vs.
+            { translate(('boxscore.vs')) }
           </div>
           <div className="score__counter">
             <h1>{ away.get('goals') }</h1>

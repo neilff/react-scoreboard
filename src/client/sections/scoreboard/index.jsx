@@ -14,15 +14,21 @@ export default React.createClass({
     const scoreboard = scores.getScoreboardCursor();
 
     var preGame = scoreboard.get('pre_game').size > 0 ?
-      <QuickBoxscore title="Pre-Game" games={ scoreboard.get('pre_game') } /> :
+      <QuickBoxscore
+        title={ this.getIntlMessage('scoreboard.preGame') }
+        games={ scoreboard.get('pre_game') } /> :
       '';
 
     var inProgress = scoreboard.get('in_progress').size > 0 ?
-      <QuickBoxscore title="In Progress" games={ scoreboard.get('in_progress') } /> :
+      <QuickBoxscore
+        title={ this.getIntlMessage('scoreboard.inProgress') }
+        games={ scoreboard.get('in_progress') } /> :
       '';
 
     var finals = scoreboard.get('final').size > 0 ?
-      <QuickBoxscore title="Final" games={ scoreboard.get('final') } /> :
+      <QuickBoxscore
+        title={ this.getIntlMessage('scoreboard.final') }
+        games={ scoreboard.get('final') } /> :
       '';
 
     return (
