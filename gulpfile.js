@@ -1,10 +1,19 @@
 var gulp = require('gulp');
+var nodemon = require('gulp-nodemon');
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
 
-gulp.task('default', ['webpack-dev-server']);
+gulp.task('default', ['nodemon', 'webpack-dev-server']);
+
+gulp.task('nodemon', function () {
+  nodemon({
+    script: 'server.js',
+    ext: 'js html',
+    env: { 'NODE_ENV': 'development' }
+  });
+});
 
 gulp.task('build-dev', ['webpack:build-dev'], function() {
   gulp.watch(['src/**/*'], ['webpack:build-dev']);

@@ -13,7 +13,7 @@ module.exports = function(isDevelopment) {
       './src/client/app.js'
     ] : ['./src/client/app.js'],
     output: {
-      path: path.join(__dirname, 'build/scripts'),
+      path: path.join(__dirname, 'build/client'),
       filename: 'bundle.js',
       publicPath: 'client/'
     },

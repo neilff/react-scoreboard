@@ -53,5 +53,8 @@
     "url-loader": "*",
     "webpack": "^1.8.10",
     "webpack-dev-server": "^1.8.2"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.0.3"
   }
 }
