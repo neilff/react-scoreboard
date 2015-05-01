@@ -1,14 +1,14 @@
 {
-  "name": "react-liqbo",
+  "name": "react-scoreboard",
   "version": "1.0.0",
-  "description": "Liqbo - Lcbo Finder written in React.js",
+  "description": "Scoreboard - Hockey Stats Dashbaord",
   "scripts": {
     "start": "node server.js",
     "postinstall": "node node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/neilff/react-liqbo.git"
+    "url": "https://github.com/neilff/react-scoreboard.git"
   },
   "engines": {
     "node": "0.10.x"
@@ -16,9 +16,9 @@
   "author": "Neil Fenton <neilff@gmail.com> (http://github.com/neilff)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/neilff/react-liqbo.git/issues"
+    "url": "https://github.com/neilff/react-scoreboard.git/issues"
   },
-  "homepage": "https://github.com/neilff/react-liqbo.git",
+  "homepage": "https://github.com/neilff/react-scoreboard.git",
   "dependencies": {
     "axios": "^0.5.4",
     "babel-core": "^5.1.13",

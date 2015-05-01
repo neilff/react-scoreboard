@@ -1,9 +1,9 @@
-# React Liqbo
+# Scoreboard
 
 ##### Install
 
 ```
-git clone https://github.com/neilff/react-liqbo.git
+git clone https://github.com/neilff/react-scoreboard.git
 npm install
 ```
 
