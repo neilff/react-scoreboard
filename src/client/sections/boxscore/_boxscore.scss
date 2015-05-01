@@ -1,0 +1,12 @@
+@import '../main/variables';
+
+.boxscore {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1rem;
+  box-sizing: border-box;
+}

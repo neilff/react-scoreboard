@@ -1,0 +1,65 @@
+@import './normalize';
+@import './skeleton';
+@import './variables';
+
+main {
+  background-color: $black;
+  color: $white;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.header-bar {
+  height: 55px;
+  background-color: $almost-black;
+  padding: 0;
+  width: 100%;
+  display: flex;
+
+  &__links {
+    flex: 1;
+
+    a {
+      background-color: $darkgray;
+      color: lightgray;
+      display: inline-flex;
+      height: 55px;
+      line-height: 55px;
+      padding: 0 2rem;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 100;
+      transition: background-color 300ms, color 300ms;
+
+      &:hover {
+        background-color: $darkgray * 1.25;
+        color: white;
+      }
+    }
+  }
+
+  h1 {
+    font-weight: 100;
+    font-family: 'Pacifico';
+    font-size: 32px;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 2rem;
+    margin-right: 5rem;
+    height: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

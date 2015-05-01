@@ -1,0 +1,71 @@
+@import '../../sections/main/breakpoints';
+@import '../../sections/main/variables';
+
+.quick-boxscore {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  &__title {
+    display: block;
+    width: 100%;
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
+
+  &__game {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+    transition: color 300ms;
+
+    @include MQ(S) {
+      width: 33%;
+    }
+
+    @include MQ(M) {
+      width: 25%;
+    }
+
+    &:hover {
+      color: $white;
+
+      .quick-boxscore__game--inner {
+        background-color: $darkgray;
+      }
+    }
+
+    &--inner {
+      padding: 1rem;
+      box-sizing: border-box;
+      background-color: $gray;
+      transition: background-color 300ms;
+    }
+
+    &--team,
+    &--details {
+      display: flex;
+      width: 100%;
+
+      span {
+        flex: 1;
+      }
+    }
+
+    &--team {
+      text-transform: uppercase;
+      font-weight: 800;
+
+      span:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    &--details {
+
+    }
+  }
+}

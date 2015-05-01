@@ -4,7 +4,7 @@ import {IntlMixin} from 'react-intl';
 import {Link, RouteHandler} from 'react-router';
 import {state} from '../../core/state';
 
-require('./main.scss');
+require('./_main.scss');
 
 export default React.createClass({
   mixins: [IntlMixin],
@@ -13,9 +13,9 @@ export default React.createClass({
     require('fastclick').attach(document.body);
 
     state.on('change', () => {
-      // console.time('whole app rerender')
+      console.time('whole app rerender')
       this.forceUpdate(() => {
-        // console.timeEnd('whole app rerender')
+        console.timeEnd('whole app rerender')
       });
     });
   },
@@ -23,9 +23,17 @@ export default React.createClass({
   render() {
     return (
       <DocumentTitle title="Liqbo">
-        <div className="layout">
-          <RouteHandler />
-        </div>
+        <main className="layout">
+          <nav className="header-bar">
+            <h1>Scoreboard</h1>
+            <div className="header-bar__links">
+              <Link to="scoreboard">Scores</Link>
+            </div>
+          </nav>
+          <div className="content">
+            <RouteHandler />
+          </div>
+        </main>
       </DocumentTitle>
     );
   }

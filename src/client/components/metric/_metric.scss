@@ -1,0 +1,41 @@
+@import '../../sections/main/variables';
+@import '../../sections/main/breakpoints';
+
+.metric {
+  box-sizing: border-box;
+  width: 100%;
+
+  @include MQ(S) {
+    width: 50%;
+  }
+
+  @include MQ(M) {
+    width: 33.33%;
+  }
+
+  @include MQ(L) {
+    width: 25%;
+  }
+
+  &--inner {
+    margin: 1rem;
+    border: 1px solid $blue;
+  }
+
+  &__title {
+    background-color: $blue;
+    color: $white;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Roboto';
+  }
+
+  &__body {
+    height: 200px;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
