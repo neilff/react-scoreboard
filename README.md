@@ -9,14 +9,12 @@ git clone https://github.com/neilff/react-scoreboard.git
 npm install
 ```
 
-##### Development
+
+##### Available tasks
 
 ```
-gulp
-```
-
-##### Build
-
-```
-gulp build
+  build      Create production build
+  build-dev  Create development build
+  help       Display this help text.
+  serve      Launch development environment
 ```
