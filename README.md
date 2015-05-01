@@ -4,11 +4,6 @@ Scoreboard is a simple dashboard application for visualizing hockey stats from v
 
 ![Alt text](/screenshot.png?raw=true "Scoreboard")
 
-##### TODO
-
-- UI/UX needs work
-- Env. variable issues
-
 ##### Install
 
 ```
@@ -24,3 +19,8 @@ npm install
   help       Display this help text.
   serve      Launch development environment
 ```
+
+##### TODO
+
+- UI/UX needs work
+- Env. variable issues
