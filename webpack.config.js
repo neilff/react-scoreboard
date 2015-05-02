@@ -53,7 +53,7 @@ module.exports = function(isDevelopment) {
       loaders: [
         { test: /\.jsx?$/, loaders: isDevelopment ? ['react-hot', 'babel'] : ['babel'], include: path.join(__dirname, 'src') },
         { loader: 'url-loader?limit=100000', test: /\.(png|woff|woff2|eot|ttf|svg)$/ },
-        { test: /\.scss$/, loader: 'style!css!sass' }
+        { test: /\.scss$/, loader: 'style!css!sass!autoprefixer' }
       ]
     }
   };
