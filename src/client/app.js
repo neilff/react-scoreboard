@@ -1,3 +1,4 @@
+import Intl from 'intl';
 import React from 'react';
 import Router from 'react-router';
 import routes from './routes';
