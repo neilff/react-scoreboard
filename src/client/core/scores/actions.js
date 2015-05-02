@@ -25,6 +25,13 @@ export function onGameInfoRefresh(data) {
 }
 
 /**
+ * Players Refresh
+ */
+export function onPlayerRefresh(data) {
+  dispatch(onPlayerRefresh, data);
+}
+
+/**
  * Scoreboard Refresh
  */
 export function onScoreboardRefresh(data) {
@@ -38,6 +45,7 @@ export function onScoreboardRefreshError(err) {
 setToString('scores', {
   onBoxscoreRefresh,
   onGameInfoRefresh,
+  onPlayerRefresh,
   onScoreboardRefresh,
   onScoreboardRefreshError
 });

@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 import {addons} from 'react/addons';
 
@@ -8,12 +9,20 @@ export default React.createClass({
 
   propTypes: {
     title: React.PropTypes.string.isRequired,
+    size: React.PropTypes.string,
     children: React.PropTypes.element.isRequired
   },
 
   render() {
+    const size = this.props.size;
+
+    var classes = classNames({
+      'metric': true,
+      'metric--full': size ==='full'
+    });
+
     return (
-      <div className="metric">
+      <div className={ classes }>
         <div className="metric--inner">
           <div className="metric__title">
             { this.props.title }

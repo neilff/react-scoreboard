@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import Metric from '../../components/metric/metric.react';
 import Overview from '../../components/overview/overview.react';
 import Score from '../../components/score/score.react';
+import PlayerList from '../../components/player-list/player-list.react';
 import DoughnutChart from '../../components/doughnut/doughnut.react.jsx';
 import * as scores from '../../core/scores/store';
 import * as actions from '../../core/scores/actions';
@@ -35,6 +36,7 @@ export default React.createClass({
   render() {
     const gameInfo = scores.getGameInfoCursor();
     const boxscore = scores.getBoxscoreCursor();
+    const players = scores.getPlayersCursor();
 
     return (
       <DocumentTitle title={ this.getIntlMessage('home.title') }>
@@ -91,6 +93,11 @@ export default React.createClass({
             <DoughnutChart
               id="shotsBlocked"
               data={ boxscore.get('shotsBlocked') } />
+          </Metric>
+          <Metric title="Player Stats" size="full">
+            <PlayerList
+              id="players"
+              data={ players } />
           </Metric>
         </div>
       </DocumentTitle>

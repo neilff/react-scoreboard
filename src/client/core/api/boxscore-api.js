@@ -68,12 +68,26 @@ function getGameListing(gameId) {
         score: _extractScore(boxscore, teams)
       });
 
+      function sortPlayer(bag, elem) {
+        bag[elem.teamId] = bag[elem.teamId] || [];
+        bag[elem.teamId] = R.concat(bag[elem.teamId], [elem]);
+        return bag;
+      }
+
+      var players = R.pipe(
+        R.reduceIndexed(sortPlayer, {}),
+        R.values
+      )(response.data.players);
+
+      actions.onPlayerRefresh(players);
+
       var gameInfo = response.data.game;
       gameInfo.teams = teams;
 
       actions.onGameInfoRefresh(gameInfo);
     })
     .then(null, function(err) {
+      console.log(err);
       console.log('Error: Unable to connect to onetwosee API');
     });
 }

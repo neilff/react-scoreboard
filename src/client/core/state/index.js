@@ -79,7 +79,8 @@ const initialState = {
     in_progress: [],
     pre_game: [],
     final: []
-  }
+  },
+  players: []
 };
 
 export const state = new State(initialState);
@@ -87,3 +88,4 @@ export const i18nCursor = state.cursor(['i18n']);
 export const gameInfoCursor = state.cursor(['gameInfo']);
 export const boxscoreCursor = state.cursor(['boxscore']);
 export const scoreboardCursor = state.cursor(['scoreboard']);
+export const playersCursor = state.cursor(['players']);

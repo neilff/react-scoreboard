@@ -17,6 +17,10 @@
     width: 25%;
   }
 
+  &--full {
+    width: 100%;
+  }
+
   &--inner {
     margin: 1rem;
     border: 1px solid $blue;

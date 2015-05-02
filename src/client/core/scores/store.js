@@ -17,6 +17,11 @@ export const dispatchToken = register(({action, data}) => {
       state.gameInfoCursor(state => state.merge(data));
       break;
 
+    case actions.onPlayerRefresh:
+      console.log('playersCursor', data);
+      state.playersCursor(state => state.merge(data));
+      break;
+
     case actions.onScoreboardRefresh:
       console.log('onScoreboardRefresh :: ', data);
       state.scoreboardCursor(state => state.merge(data));
@@ -38,4 +43,8 @@ export function getBoxscoreCursor() {
 
 export function getScoreboardCursor() {
   return state.scoreboardCursor();
+}
+
+export function getPlayersCursor() {
+  return state.playersCursor();
 }
